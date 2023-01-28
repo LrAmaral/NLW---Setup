@@ -1,0 +1,113 @@
+* {
+  /*regrando o user agent*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*desconsidera os preenchimentos internos para sempre manter a caixa com a forma que eu definir*/
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  color: white;
+}
+
+header {
+  display: flex; /*flexível*/
+  align-items: center; /*só funciona com a propriedade flex*/
+  justify-content: space-between; /*joga os elementos um em cada ponta*/
+
+  padding: 40px; /*preenchimento*/
+
+  position: fixed; /*todos os elementos sobem 1 andar, por isso a sobreposição */
+  width: 100%;
+  background-color: #09090a;
+}
+
+button {
+  border: 1px solid #8b5cf6;
+  color: white;
+  padding: 16px 24px;
+  background-color: transparent;
+  border-radius: 8px;
+
+  display: flex; /*o posicionamento é sempre inline, porém quando se usa o flex, ele será levado para baixo*/
+  align-items: center; /*só existe quando há uma opção flex*/
+  gap: 12px; /*elemento do tipo flex eu posso usar o gap e falar os espaços entre os elementos*/
+
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+
+  padding: 182px 48px 48px;
+  width: fit-content; /*encaixe o conteúdo*/
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  margin-left: 32px;
+  gap: 48px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #a1a1aa;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none; /*prefixo para alguns navegadores*/
+
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 2px solid #27272a;
+
+  background: #18181b;
+}
+
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }
+}
